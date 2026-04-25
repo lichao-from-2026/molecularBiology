@@ -1,234 +1,272 @@
 /**
- * 状态选择器组件 - CSS Module 样式
- * 定义组件的视觉样式
+ * 状态选择器样式
+ * 描述：StatusSelector 组件的样式定义
+ * 作者：AI Assistant
+ * 日期：2026-04-22
  */
 
-.status-selector {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+/* 状态选择器容器 */
+.statusSelector {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); /* 背景渐变 */
+  border: 1px solid #e2e8f0; /* 边框 */
+  border-radius: 12px; /* 圆角 */
+  padding: 20px; /* 内边距 */
+  margin: 20px 0; /* 外边距 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* 字体 */
 }
 
-.status-selector-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  gap: 12px;
+/* 头部 */
+.statusSelectorHeader {
+  display: flex; /* 弹性布局 */
+  justify-content: space-between; /* 水平分布 */
+  align-items: center; /* 垂直居中 */
+  margin-bottom: 16px; /* 底部边距 */
+  flex-wrap: wrap; /* 换行 */
+  gap: 12px; /* 间距 */
 }
 
-.status-selector-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #1e293b;
-  margin: 0;
+/* 标题 */
+.statusSelectorTitle {
+  font-size: 18px; /* 字体大小 */
+  font-weight: 600; /* 字体粗细 */
+  color: #1e293b; /* 字体颜色 */
+  margin: 0; /* 外边距 */
 }
 
-.status-selector-stats {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+/* 统计信息 */
+.statusSelectorStats {
+  display: flex; /* 弹性布局 */
+  gap: 16px; /* 间距 */
+  flex-wrap: wrap; /* 换行 */
 }
 
+/* 统计项 */
 .stat {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 4px 12px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  font-size: 14px; /* 字体大小 */
+  font-weight: 500; /* 字体粗细 */
+  padding: 4px 12px; /* 内边距 */
+  border-radius: 20px; /* 圆角 */
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 6px; /* 间距 */
 }
 
+/* 已完成统计项 */
 .stat.completed {
-  background-color: #d1fae5;
-  color: #059669;
+  background-color: #d1fae5; /* 背景色 */
+  color: #059669; /* 颜色 */
 }
 
-.stat.in-progress {
-  background-color: #fef3c7;
-  color: #d97706;
+/* 进行中统计项 */
+.stat.inProgress {
+  background-color: #fef3c7; /* 背景色 */
+  color: #d97706; /* 颜色 */
 }
 
+/* 待完成统计项 */
 .stat.pending {
-  background-color: #f1f5f9;
-  color: #64748b;
+  background-color: #f1f5f9; /* 背景色 */
+  color: #64748b; /* 颜色 */
 }
 
-.status-selector-progress {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+/* 进度条容器 */
+.statusSelectorProgress {
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 12px; /* 间距 */
+  margin-bottom: 20px; /* 底部边距 */
 }
 
-.progress-bar {
-  flex: 1;
-  height: 8px;
-  background-color: #e2e8f0;
-  border-radius: 4px;
-  overflow: hidden;
+/* 进度条 */
+.progressBar {
+  flex: 1; /* 占满剩余空间 */
+  height: 8px; /* 高度 */
+  background-color: #e2e8f0; /* 背景色 */
+  border-radius: 4px; /* 圆角 */
+  overflow: hidden; /* 隐藏溢出 */
 }
 
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
-  border-radius: 4px;
-  transition: width 0.3s ease;
+/* 进度条填充 */
+.progressFill {
+  height: 100%; /* 高度 */
+  background: linear-gradient(90deg, #10b981 0%, #34d399 100%); /* 背景渐变 */
+  border-radius: 4px; /* 圆角 */
+  transition: width 0.3s ease; /* 过渡效果 */
 }
 
-.progress-text {
-  font-size: 13px;
-  font-weight: 500;
-  color: #64748b;
-  min-width: 60px;
-  text-align: right;
+/* 进度文本 */
+.progressText {
+  font-size: 13px; /* 字体大小 */
+  font-weight: 500; /* 字体粗细 */
+  color: #64748b; /* 字体颜色 */
+  min-width: 60px; /* 最小宽度 */
+  text-align: right; /* 文本右对齐 */
 }
 
-.status-selector-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* 项目列表 */
+.statusSelectorList {
+  display: flex; /* 弹性布局 */
+  flex-direction: column; /* 垂直排列 */
+  gap: 8px; /* 间距 */
 }
 
-.status-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  background-color: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+/* 项目项 */
+.statusItem {
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 12px; /* 间距 */
+  padding: 12px 16px; /* 内边距 */
+  background-color: white; /* 背景色 */
+  border: 1px solid #e2e8f0; /* 边框 */
+  border-radius: 8px; /* 圆角 */
+  cursor: pointer; /* 鼠标指针 */
+  transition: all 0.2s ease; /* 过渡效果 */
 }
 
-.status-item:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-color: #cbd5e1;
+/* 项目项悬停效果 */
+.statusItem:hover {
+  transform: translateY(-1px); /* 上移 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 阴影 */
+  border-color: #cbd5e1; /* 边框颜色 */
 }
 
-.status-item.pending {
-  border-left: 3px solid #94a3b8;
+/* 待完成项目项 */
+.statusItem.pending {
+  border-left: 3px solid #94a3b8; /* 左侧边框 */
 }
 
-.status-item.in-progress {
-  border-left: 3px solid #f59e0b;
+/* 进行中项目项 */
+.statusItem.inProgress {
+  border-left: 3px solid #f59e0b; /* 左侧边框 */
 }
 
-.status-item.completed {
-  border-left: 3px solid #10b981;
+/* 已完成项目项 */
+.statusItem.completed {
+  border-left: 3px solid #10b981; /* 左侧边框 */
 }
 
-.status-item.completed .status-item-label {
-  text-decoration: line-through;
-  color: #94a3b8;
+/* 已完成项目标签 */
+.statusItem.completed .statusItemLabel {
+  text-decoration: line-through; /* 删除线 */
+  color: #94a3b8; /* 颜色 */
 }
 
-.status-item-icon {
-  font-size: 20px;
-  width: 28px;
-  text-align: center;
-  flex-shrink: 0;
+/* 项目图标 */
+.statusItemIcon {
+  font-size: 20px; /* 字体大小 */
+  width: 28px; /* 宽度 */
+  text-align: center; /* 文本居中 */
+  flex-shrink: 0; /* 不收缩 */
 }
 
-.status-item-content {
-  flex: 1;
-  min-width: 0;
+/* 项目内容 */
+.statusItemContent {
+  flex: 1; /* 占满剩余空间 */
+  min-width: 0; /* 最小宽度 */
 }
 
-.status-item-label {
-  font-size: 15px;
-  font-weight: 500;
-  color: #1e293b;
-  transition: all 0.2s ease;
+/* 项目标签 */
+.statusItemLabel {
+  font-size: 15px; /* 字体大小 */
+  font-weight: 500; /* 字体粗细 */
+  color: #1e293b; /* 字体颜色 */
+  transition: all 0.2s ease; /* 过渡效果 */
 }
 
-.status-item-description {
-  font-size: 13px;
-  color: #64748b;
-  margin-top: 2px;
+/* 项目描述 */
+.statusItemDescription {
+  font-size: 13px; /* 字体大小 */
+  color: #64748b; /* 字体颜色 */
+  margin-top: 2px; /* 顶部边距 */
 }
 
-.status-item-path {
-  font-size: 12px;
-  color: #94a3b8;
-  font-family: 'Monaco', 'Menlo', monospace;
-  margin-top: 4px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+/* 文件路径 */
+.statusItemPath {
+  font-size: 12px; /* 字体大小 */
+  color: #94a3b8; /* 字体颜色 */
+  font-family: 'Monaco', 'Menlo', monospace; /* 等宽字体 */
+  margin-top: 4px; /* 顶部边距 */
+  overflow: hidden; /* 隐藏溢出 */
+  text-overflow: ellipsis; /* 省略号 */
+  white-space: nowrap; /* 不换行 */
 }
 
-.status-item-badge {
-  font-size: 12px;
-  font-weight: 500;
-  padding: 4px 10px;
-  border-radius: 12px;
-  flex-shrink: 0;
-  transition: all 0.2s ease;
+/* 状态徽章 */
+.statusItemBadge {
+  font-size: 12px; /* 字体大小 */
+  font-weight: 500; /* 字体粗细 */
+  padding: 4px 10px; /* 内边距 */
+  border-radius: 12px; /* 圆角 */
+  flex-shrink: 0; /* 不收缩 */
+  transition: all 0.2s ease; /* 过渡效果 */
 }
 
-.status-selector-footer {
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid #e2e8f0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
+/* 页脚 */
+.statusSelectorFooter {
+  margin-top: 16px; /* 顶部边距 */
+  padding-top: 16px; /* 顶部内边距 */
+  border-top: 1px solid #e2e8f0; /* 顶部边框 */
+  display: flex; /* 弹性布局 */
+  justify-content: space-between; /* 水平分布 */
+  align-items: center; /* 垂直居中 */
+  flex-wrap: wrap; /* 换行 */
+  gap: 8px; /* 间距 */
 }
 
-.status-legend {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+/* 图例 */
+.statusLegend {
+  display: flex; /* 弹性布局 */
+  gap: 16px; /* 间距 */
+  flex-wrap: wrap; /* 换行 */
 }
 
-.legend-item {
-  font-size: 12px;
-  color: #64748b;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+/* 图例项 */
+.legendItem {
+  font-size: 12px; /* 字体大小 */
+  color: #64748b; /* 字体颜色 */
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 4px; /* 间距 */
 }
 
-.legend-icon {
-  font-size: 14px;
+/* 图例图标 */
+.legendIcon {
+  font-size: 14px; /* 字体大小 */
 }
 
-.status-hint {
-  font-size: 12px;
-  color: #94a3b8;
-  font-style: italic;
+/* 提示文本 */
+.statusHint {
+  font-size: 12px; /* 字体大小 */
+  color: #94a3b8; /* 字体颜色 */
+  font-style: italic; /* 斜体 */
 }
 
+/* 响应式设计 */
 @media (max-width: 640px) {
-  .status-selector {
-    padding: 16px;
+  /* 状态选择器容器 */
+  .statusSelector {
+    padding: 16px; /* 内边距 */
   }
 
-  .status-selector-header {
-    flex-direction: column;
-    align-items: flex-start;
+  /* 头部 */
+  .statusSelectorHeader {
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-start; /* 左对齐 */
   }
 
-  .status-item {
-    padding: 10px 12px;
+  /* 项目项 */
+  .statusItem {
+    padding: 10px 12px; /* 内边距 */
   }
 
-  .status-item-path {
-    display: none;
+  /* 隐藏文件路径 */
+  .statusItemPath {
+    display: none; /* 隐藏 */
   }
 
-  .status-selector-footer {
-    flex-direction: column;
-    align-items: flex-start;
+  /* 页脚 */
+  .statusSelectorFooter {
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-start; /* 左对齐 */
   }
 }
